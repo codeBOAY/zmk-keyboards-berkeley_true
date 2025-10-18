@@ -24,11 +24,11 @@
 
 // Layer switching
 #define SECLTHMB  &ltsk  MEDIA    LSHIFT  // tap for sticky shift : hold for media layer
-#define PRMLTHMB  &ltr   NUM      0      //  zero here because key-repeat does not take arguments
+#define PRMLTHMB  &mt    RC(BSPC) BSPC      //  zero here because key-repeat does not take arguments
 #define TERLTHMB  &mt    LSHIFT   TAB   //   tap for tab : hold for shift
 
 #define TERRTHMB  &lt    NAV      SPACE
-#define PRMRTHMB  &mt    RC(BSPC) BSPC   // tap gives you backspace : long tap gives you delete word
+#define PRMRTHMB  &ltr   NUM      0   // tap gives you backspace : long tap gives you delete word
 #define SECRTHMB  &ltsk  FUN      RCTRL //  tap for sticky ctrl : hold for function layer
 
 // shorter codes
@@ -90,10 +90,11 @@
        _x_       _x_       _x_       _x_       _x_           _x_       _x_       _x_    &dot_cln     _x_
 // ╰─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────╯
 //                     │   NOP   │   NOP   │   NOP   │   │  SPACE  │   NOP   │  ENTER  │
-                        _x_       ___       _x_           &kp SPACE &kp BSPC  &kp RET
+                        &kp SPACE &kp BSPC  &kp RET          _x_       ___       _x_
 //                     ╰─────────────────────────────╯   ╰─────────────────────────────╯
       >;
     };
+
 
     navigation_layer { // layer 2 (navigation)
       bindings = <
